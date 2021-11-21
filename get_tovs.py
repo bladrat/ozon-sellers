@@ -54,14 +54,14 @@ def main(url, name):
         for elem in range(len_seller(driver)):
             try:
                 driver.get(url)
-                time.sleep(3)
+                time.sleep(2)
                 try:
                     open_sellers(driver)
                 except:
                     fadfdf = 1
-                time.sleep(3)
+                time.sleep(2)
                 select_seller(driver, elem)
-                time.sleep(4)
+                time.sleep(3)
                 tovars.append(get_tovar(driver))
 
                 with open(name, 'w') as f:
@@ -86,21 +86,5 @@ def main(url, name):
     finally:
         driver.close() 
 
-main("https://www.ozon.ru/category/antikvariat-vintazh-iskusstvo-8000/?sorting=new", "antikvariat-vintazh-iskusstvo-8000.json")
-main("https://www.ozon.ru/category/igry-i-soft-13300/?sorting=new", "igry-i-soft-13300.json")
-main("https://www.ozon.ru/category/aksessuary-7697/", "aksessuary-7697.json")
-main("https://www.ozon.ru/category/yuvelirnye-ukrasheniya-50001/", "yuvelirnye-ukrasheniya-50001.json")
-main("https://www.ozon.ru/category/mebel-15000/?sorting=discount", "mebel-15000.json")
-main("https://www.ozon.ru/category/avtotovary-8500/?sorting=discount", "avtotovary-8500.json")
-main("https://www.ozon.ru/category/knigi-16500/?bymediatype=1147731%2C1147732&sorting=rating", "knigi-16500.json")
-main("https://www.ozon.ru/category/apteka-6000/", "apteka-6000.json")
-main("https://www.ozon.ru/category/stroitelstvo-i-remont-9700/?sorting=rating", "stroitelstvo-i-remont-9700.json")
-main("https://www.ozon.ru/category/sport-i-otdyh-11000/?sorting=rating", "sport-i-otdyh-11000.json")
-main("https://www.ozon.ru/category/bytovaya-tehnika-10500/?sorting=rating", "bytovaya-tehnika-10500.json")
-main("https://www.ozon.ru/category/krasota-i-zdorove-6500/", "krasota-i-zdorove-6500.json")
-main("https://www.ozon.ru/category/dom-i-sad-14500/?sorting=score", "dom-i-sad-14500.json")
-main("https://www.ozon.ru/category/obuv-17777/", "obuv-17777.json")
+
 main("https://www.ozon.ru/category/elektronika-15500/?sorting=rating", "elektronika-15500.json")
-main("https://www.ozon.ru/category/kantselyarskie-tovary-18000/?sorting=new", "kantselyarskie-tovary-18000  .json")
-main("https://www.ozon.ru/category/detskie-tovary-7000/?sorting=new", "detskie-tovary-7000.json")
-main("https://www.ozon.ru/category/hobbi-i-tvorchestvo-13500/?sorting=new", "hobbi-i-tvorchestvo-13500.json")
